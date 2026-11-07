@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teamtonex.github.io/TeamTonex-AIO/sitemap.xml
