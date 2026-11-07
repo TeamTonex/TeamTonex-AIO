@@ -1,0 +1,81 @@
+name: Bug report
+description: Something doesn't work or doesn't look right
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The more you tell us, the faster we can fix it.
+        **Report a bug** in the program's Settings opens this form with your version already filled in.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: In Settings, under Updates.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: tab
+    attributes:
+      label: Where in the program
+      options:
+        - Bags
+        - Clothing
+        - Vests
+        - Sign
+        - Vehicles
+        - Mods
+        - Updates or settings
+        - In game, on a server
+        - Somewhere else
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What went wrong, and any error message you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: The steps, one per line, so we can see it ourselves.
+      placeholder: |
+        1. Open the Vehicles tab
+        2. Open a car
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: input
+    id: mod
+    attributes:
+      label: Mod or pack link
+      description: If it happened with a mod or clothing pack, its link.
+      placeholder: https://www.gta5-mods.com/...
+  - type: textarea
+    id: pictures
+    attributes:
+      label: Screenshots or video
+      description: Drag pictures or a short video here.
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send it
+      options:
+        - label: I have the newest version (Settings > Check for updates).
+          required: true
+        - label: I looked through the open issues and this isn't one of them.
+          required: true
