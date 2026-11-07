@@ -65,7 +65,9 @@ The only things the program connects to are GitHub, for updates, and the mod pag
 
 ## Help
 
-Found a bug or have an idea? [Open an issue](https://github.com/TeamTonex/TeamTonex-AIO/issues).
+- **Found a bug?** In the program, **Settings > Help > Report a bug** opens the form with your version filled in. Or [open an issue](https://github.com/TeamTonex/TeamTonex-AIO/issues/new/choose) here.
+- **Have an idea?** **Settings > Help > Suggest an idea**, or the same link.
+- **Question?** Ask in [Discussions](https://github.com/TeamTonex/TeamTonex-AIO/discussions).
 
 ## Licence
 
