@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2
+
+- Vehicles: open a car the way it was downloaded, as a .7z, .rar or .zip with folders and readmes. The program unpacks it and picks the car, the Add-On dlc.rpf first, otherwise the .yft and .ytd files.
+- Mods: .7z downloads now open (7-Zip is included).
+- Mods: when a car comes as both an Add-On and a Replace version, only the Add-On is used, so the resource no longer swaps out one of the game's own cars as well.
+
 ## 1.1.1
 
 - Updates install quietly in the background and the program starts again on its own, with no window left waiting. This takes effect from the next update after this one.
