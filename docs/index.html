@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TeamTonex AIO: Free FiveM Clothing Creator and Mod Converter</title>
+<meta name="description" content="Free FiveM tool for Windows: custom clothing and EUP, backpacks, a custom Vinewood sign, cars with sirens, and a gta5-mods to FiveM converter.">
+<link rel="canonical" href="https://teamtonex.github.io/TeamTonex-AIO/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="icon" href="img/logo-256.png" type="image/png" sizes="256x256">
+<link rel="apple-touch-icon" href="img/logo-256.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TeamTonex AIO">
+<meta property="og:title" content="TeamTonex AIO: free FiveM clothing creator, vehicle editor and mod converter">
+<meta property="og:description" content="Custom clothing, backpacks, vests, the Vinewood sign, cars with sirens, and gta5-mods to FiveM. One free program, every tab exports a ready FiveM resource.">
+<meta property="og:url" content="https://teamtonex.github.io/TeamTonex-AIO/">
+<meta property="og:image" content="https://teamtonex.github.io/TeamTonex-AIO/img/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="TeamTonex AIO logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TeamTonex AIO: free FiveM clothing creator, vehicle editor and mod converter">
+<meta name="twitter:description" content="Custom clothing, backpacks, the Vinewood sign, cars with sirens, and gta5-mods to FiveM. Free for Windows.">
+<meta name="twitter:image" content="https://teamtonex.github.io/TeamTonex-AIO/img/social-preview.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "TeamTonex AIO",
+      "applicationCategory": "DesignApplication",
+      "applicationSubCategory": "FiveM server tools",
+      "operatingSystem": "Windows 10, Windows 11",
+      "description": "Free all-in-one program for FiveM servers: custom clothing and EUP-style uniforms, backpacks and vests, a custom Vinewood sign, a vehicle editor with sirens and LED lightbars, and a gta5-mods.com to FiveM resource converter.",
+      "url": "https://teamtonex.github.io/TeamTonex-AIO/",
+      "downloadUrl": "https://github.com/TeamTonex/TeamTonex-AIO/releases/latest",
+      "softwareHelp": "https://github.com/TeamTonex/TeamTonex-AIO/discussions",
+      "image": "https://teamtonex.github.io/TeamTonex-AIO/img/social-preview.png",
+      "screenshot": [
+        "https://teamtonex.github.io/TeamTonex-AIO/img/fivem-clothing-creator.jpg",
+        "https://teamtonex.github.io/TeamTonex-AIO/img/fivem-vinewood-sign-editor.jpg",
+        "https://teamtonex.github.io/TeamTonex-AIO/img/gta5-mods-to-fivem-converter.jpg"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "author": { "@type": "Organization", "name": "TeamTonex", "url": "https://github.com/TeamTonex" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I make custom clothing for FiveM?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Open the Clothing tab in TeamTonex AIO, pick a piece, paint it or add your own image, and press Export for FiveM. You get a resource with the clothing already named the way FiveM streams it. Put it in your server's resources folder and add ensure to server.cfg." } },
+        { "@type": "Question", "name": "How do I convert a gta5-mods car to FiveM?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In the Mods tab, paste the car's gta5-mods.com link and click Download on the page that opens, or pick a .zip, .rar, .7z, .oiv or .rpf you already downloaded. The program unpacks the dlc.rpf and writes the fxmanifest.lua, the stream folder, the meta files and the car's name." } },
+        { "@type": "Question", "name": "How do I add sirens or an LED lightbar to a FiveM car?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Open the car in the Vehicles tab, go to Lights, and draw a line where the lights should go or pick a ready-made set. Siren bones are added to cars that have none, and the siren setting is written to carcols.meta." } },
+        { "@type": "Question", "name": "Is TeamTonex AIO free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no account, no watermark and nothing to pay. It needs Windows 10 or 11 and your own copy of GTA V." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000; --panel: #0b0c0e; --raised: #17191d; --line: #ffffff1a;
+    --text: #f5f6f7; --muted: #9ea4ae; --faint: #6c727c;
+    --bag: #ff9d45; --suit: #38c6f4; --vest: #a3e635; --sign: #f472b6; --vehicle: #a78bfa; --mods: #facc15;
+    --accent: var(--vehicle);
+    --display: 'Rajdhani', Inter, system-ui, sans-serif;
+    --cut-12: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+    --cut-8: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Inter, system-ui, sans-serif; }
+  a { color: inherit; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+  header { position: sticky; top: 0; z-index: 5; background: #000c; backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; gap: 14px; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: .04em; text-transform: uppercase; }
+  .brand img { width: 30px; height: 30px; }
+  nav { margin-left: auto; display: flex; gap: 20px; font-size: 14px; color: var(--muted); }
+  nav a { text-decoration: none; }
+  nav a:hover { color: var(--text); }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; clip-path: var(--cut-8); }
+  .btn.primary { background: var(--accent); color: #0a0614; }
+  .btn.primary:hover { background: #fff; }
+  .btn.ghost { background: var(--raised); color: var(--text); }
+  .btn.ghost:hover { background: #23262c; }
+
+  .hero { padding: 72px 0 40px; text-align: center; }
+  .eyebrow { display: inline-block; font-family: var(--display); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: 14px; color: var(--accent); margin-bottom: 14px; }
+  h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 6vw, 60px); line-height: 1.05; margin: 0 auto 18px; max-width: 900px; text-transform: uppercase; letter-spacing: .01em; }
+  .lead { color: var(--muted); font-size: 18px; max-width: 720px; margin: 0 auto 30px; }
+  .cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+  .small { color: var(--faint); font-size: 13px; margin-top: 14px; }
+  .shot { margin: 46px auto 0; max-width: 1000px; padding: 6px; background: var(--panel); clip-path: var(--cut-12); }
+  .shot img { clip-path: var(--cut-8); }
+
+  section { padding: 56px 0; }
+  h2 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 4vw, 38px); text-transform: uppercase; letter-spacing: .02em; margin: 0 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 28px; max-width: 720px; }
+
+  .tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .tab { background: var(--panel); padding: 22px 22px 20px; clip-path: var(--cut-12); border-top: 3px solid var(--c); }
+  .tab h3 { font-family: var(--display); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin: 0 0 6px; color: var(--c); }
+  .tab p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  .feature { display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; align-items: center; padding: 30px 0; }
+  .feature:nth-child(even) .copy { order: 2; }
+  .feature h3 { font-family: var(--display); font-size: 28px; font-weight: 700; text-transform: uppercase; margin: 0 0 10px; color: var(--c); }
+  .feature ul { margin: 0; padding-left: 0; list-style: none; color: var(--muted); }
+  .feature li { position: relative; padding-left: 18px; margin: 8px 0; }
+  .feature li::before { content: ''; position: absolute; left: 0; top: .62em; width: 8px; height: 3px; background: var(--c); transform: skewX(-20deg); }
+  .feature .pic { background: var(--panel); padding: 5px; clip-path: var(--cut-12); }
+  .feature .pic img { clip-path: var(--cut-8); }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; counter-reset: s; }
+  .step { background: var(--panel); padding: 20px; clip-path: var(--cut-12); }
+  .step::before { counter-increment: s; content: counter(s); display: block; font-family: var(--display); font-weight: 700; font-size: 34px; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; }
+  code { background: var(--raised); padding: 1px 6px; font-size: .9em; }
+
+  details { background: var(--panel); clip-path: var(--cut-8); margin-bottom: 10px; }
+  summary { cursor: pointer; padding: 16px 20px; font-weight: 600; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; float: right; color: var(--accent); font-weight: 700; }
+  details[open] summary::after { content: '−'; }
+  details p { margin: 0; padding: 0 20px 18px; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding: 30px 0 40px; color: var(--faint); font-size: 13px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 760px) {
+    nav { display: none; }
+    .hero { padding-top: 48px; }
+    .feature { grid-template-columns: 1fr; gap: 18px; }
+    .feature:nth-child(even) .copy { order: 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/logo.svg" alt="" width="30" height="30">TeamTonex AIO</a>
+    <nav>
+      <a href="#tabs">Features</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/TeamTonex/TeamTonex-AIO">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <span class="eyebrow">Free for FiveM servers</span>
+    <h1>FiveM clothing creator, vehicle editor and mod converter in one</h1>
+    <p class="lead">Make custom clothing, EUP-style uniforms and backpacks, put your server's name on the Vinewood sign, add sirens and LED lightbars to cars, and turn gta5-mods.com downloads into FiveM resources. Every tab exports a ready resource.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/TeamTonex/TeamTonex-AIO/releases/latest">Download for Windows</a>
+      <a class="btn ghost" href="https://github.com/TeamTonex/TeamTonex-AIO">View on GitHub</a>
+    </div>
+    <p class="small">Windows 10 or 11 and your own copy of GTA V. No account, nothing to pay.</p>
+    <div class="shot"><img src="img/fivem-clothing-creator.jpg" width="1600" height="900" alt="TeamTonex AIO clothing creator: a FiveM t-shirt painted with a gradient on the male freemode body"></div>
+  </div>
+
+  <section id="tabs">
+    <div class="wrap">
+      <h2>Six tabs, one program</h2>
+      <p class="sub">Works with QBCore, Qbox, ESX and standalone servers. Drop the exported folder into <code>resources</code> and add <code>ensure</code> to <code>server.cfg</code>.</p>
+      <div class="tabs">
+        <article class="tab" style="--c: var(--bag)"><h3>Bags</h3><p>Custom backpacks and bags for FiveM, from the game's own, from a clothing pack, from scratch or from a photo.</p></article>
+        <article class="tab" style="--c: var(--suit)"><h3>Clothing</h3><p>Tops, pants, masks, shoes and accessories, painted in layers and reshaped: uniforms, gang colours, server merch.</p></article>
+        <article class="tab" style="--c: var(--vest)"><h3>Vests</h3><p>Vests with pouches for police, EMS and EUP-style outfits.</p></article>
+        <article class="tab" style="--c: var(--sign)"><h3>Sign</h3><p>Your own letters and logo on the real Vinewood hill, checked by day and night.</p></article>
+        <article class="tab" style="--c: var(--vehicle)"><h3>Vehicles</h3><p>Parts, rims, badges, paint and liveries, body shape, handling, sirens and LED lightbars.</p></article>
+        <article class="tab" style="--c: var(--mods)"><h3>Mods</h3><p>Any gta5-mods.com mod, RPF or .oiv turned into a FiveM resource.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="feature" style="--c: var(--suit)">
+        <div class="copy">
+          <h3>FiveM clothing creator</h3>
+          <ul>
+            <li>Any piece from your own GTA V for the male or female freemode body, or a clothing pack you downloaded.</li>
+            <li>Paint in layers: colour, gradient, pattern, images, text and drawing, live on the body in 3D.</li>
+            <li>Reshape pieces, cut sleeves, make bags and vests from scratch.</li>
+            <li>Exports a streamed clothing resource with the names FiveM expects.</li>
+          </ul>
+        </div>
+        <div class="pic"><img src="img/fivem-clothing-creator.jpg" width="1600" height="900" loading="lazy" alt="Custom FiveM t-shirt with a gradient layer in the TeamTonex AIO clothing creator"></div>
+      </div>
+      <div class="feature" style="--c: var(--sign)">
+        <div class="copy">
+          <h3>Custom Vinewood sign</h3>
+          <ul>
+            <li>Your server's name, a second line and a logo, on the real hill read from your own game.</li>
+            <li>Move, size and tilt every part, check it at night and from the city.</li>
+            <li>Exported as a map resource that replaces the old letters.</li>
+          </ul>
+        </div>
+        <div class="pic"><img src="img/fivem-vinewood-sign-editor.jpg" width="1600" height="875" loading="lazy" alt="Custom Vinewood sign for FiveM: MY SERVER letters on the real Vinewood hill"></div>
+      </div>
+      <div class="feature" style="--c: var(--mods)">
+        <div class="copy">
+          <h3>gta5-mods to FiveM converter</h3>
+          <ul>
+            <li>Paste a gta5-mods.com link or pick a .zip, .rar, .7z, .oiv or .rpf you already have.</li>
+            <li>Every RPF inside is unpacked and sorted into <code>stream</code> and <code>data</code> with the right <code>data_file</code> lines.</li>
+            <li>Cars get a name in game and ready lines for QBCore, Qbox and ESX.</li>
+            <li>Big textures are made smaller so players load less.</li>
+          </ul>
+        </div>
+        <div class="pic"><img src="img/gta5-mods-to-fivem-converter.jpg" width="1600" height="900" loading="lazy" alt="A gta5-mods.com car converted to a FiveM resource in TeamTonex AIO"></div>
+      </div>
+      <div class="feature" style="--c: var(--vehicle)">
+        <div class="copy">
+          <h3>Sirens and LED lightbars</h3>
+          <ul>
+            <li>Draw a line on the car and pick a light set made to fit it, with a live preview.</li>
+            <li>LED strips bend with the body. Pick the pattern and how many flashes each side gets.</li>
+            <li>Ready-made sets: patrol, interceptor, unmarked, detective, fire, tow.</li>
+            <li>Siren bones are added to cars that have none.</li>
+          </ul>
+        </div>
+        <div class="pic" style="padding: 28px; display: grid; place-items: center; min-height: 220px;">
+          <img src="img/logo.svg" width="160" height="160" loading="lazy" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="wrap">
+      <h2>Install</h2>
+      <p class="sub">The game is only read; nothing in it changes. The program updates itself from GitHub.</p>
+      <div class="steps">
+        <div class="step"><p>Download <code>TeamTonex-AIO-win64.zip</code> from <a href="https://github.com/TeamTonex/TeamTonex-AIO/releases/latest">Releases</a>.</p></div>
+        <div class="step"><p>Unzip it anywhere you can write to, not <code>Program Files</code>.</p></div>
+        <div class="step"><p>Run <code>TeamTonex AIO.exe</code> and point it at your GTA V folder if it isn't found.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <details><summary>How do I make custom clothing for FiveM?</summary><p>Open the Clothing tab, pick a piece, paint it or add your own image, and press Export for FiveM. You get a resource with the clothing already named the way FiveM streams it. Put it in <code>resources</code>, add <code>ensure</code> to <code>server.cfg</code>, and it shows up in your clothing menu.</p></details>
+      <details><summary>How do I convert a gta5-mods car to FiveM?</summary><p>In the Mods tab, paste the car's gta5-mods.com link and click Download on the page that opens, or pick the file you already downloaded. The program unpacks the archive and its <code>dlc.rpf</code>, and writes the <code>fxmanifest.lua</code>, <code>stream</code> folder, meta files and the car's name for you. When a car comes as Add-On and Replace, only the Add-On is used.</p></details>
+      <details><summary>How do I add sirens or an LED lightbar to a FiveM car?</summary><p>Open the car in the Vehicles tab, go to Lights, and draw a line where the lights should go or pick a ready-made set. Siren bones are added if the car has none, and the siren setting is written to <code>carcols.meta</code>.</p></details>
+      <details><summary>Is it really free?</summary><p>Yes. There is no account, no watermark and nothing to pay.</p></details>
+      <details><summary>Does it work without GTA V?</summary><p>No. Models and textures come from your own copy of GTA V, which the program only reads.</p></details>
+      <details><summary>Can clothing from it be used to cheat?</summary><p>No. Exported clothing has no collision, armour or damage data.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>TeamTonex AIO by <a href="https://github.com/TeamTonex">TeamTonex</a>. Free to use, not open source.</span>
+    <span>Not affiliated with Rockstar Games, Take-Two Interactive or Cfx.re.</span>
+  </div>
+</footer>
+</body>
+</html>
