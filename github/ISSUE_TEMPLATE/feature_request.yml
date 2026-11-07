@@ -1,0 +1,42 @@
+name: Idea or request
+description: Something you'd like the program to do
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: dropdown
+    id: tab
+    attributes:
+      label: Where in the program
+      options:
+        - Bags
+        - Clothing
+        - Vests
+        - Sign
+        - Vehicles
+        - Mods
+        - Something new
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What should it do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it would help
+      description: What would you use it for on your server?
+  - type: textarea
+    id: pictures
+    attributes:
+      label: Examples
+      description: Pictures, links or other programs that do something like it.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: In Settings, under Updates.
+      placeholder: "1.0.0"
