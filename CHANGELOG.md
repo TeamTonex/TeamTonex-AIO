@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+- Updates install quietly in the background and the program starts again on its own, with no window left waiting. This takes effect from the next update after this one.
+- Sliders in every tab drag smoothly: grabbing the handle no longer makes it jump, the grab area is bigger, and Shift moves it in finer steps.
+- Sign: the preview follows a slider while you drag it, not only after you let go.
+
 ## 1.1.0
 
 - Sign: the real Vinewood hill from your own game, with its ground textures, roads, trees and the radio tower, instead of a drawn hill. It is read once, in about half a minute, the first time the Sign tab opens.
