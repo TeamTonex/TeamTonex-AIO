@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0
+
+- Sign: the real Vinewood hill from your own game, with its ground textures, roads, trees and the radio tower, instead of a drawn hill. It is read once, in about half a minute, the first time the Sign tab opens.
+- Sign: the frame posts now reach the real ground, in the preview and in the exported sign.
+- Sign: a softer sky with haze in the distance, and moonlight at night.
+- Clothing: arms show in full under short and slanted sleeves, with no gaps at the hem.
+- Bags and clothing: a note when all your imported pieces for a slot are made for the other body.
+- Your imported packs and designs are found again when the program starts without its settings.
+
 ## 1.0.0
 
 First public release.
