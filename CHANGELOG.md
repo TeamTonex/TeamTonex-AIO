@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.3
+
+- Updates are now required. Every time the program starts it checks for a new version and, if there is one, downloads and installs it by itself before opening.
+- If a new version comes out while the program is open, you get two minutes to save, then it updates. Designs save themselves.
+- Without internet, or when GitHub can't be reached, the program opens as usual.
+
 ## 1.1.2
 
 - Vehicles: open a car the way it was downloaded, as a .7z, .rar or .zip with folders and readmes. The program unpacks it and picks the car, the Add-On dlc.rpf first, otherwise the .yft and .ytd files.
