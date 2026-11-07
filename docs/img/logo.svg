@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>TeamTonex</title>
+  <path d="M0 0H432L512 80V512H80L0 432Z" fill="#000"/>
+  <path d="M14 14H426L498 86V498H86L14 426Z" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="4"/>
+  <path d="M164 150H432L414 204H146Z" fill="#a78bfa"/>
+  <path d="M282 204H344L318 392H256Z" fill="#a78bfa"/>
+  <path d="M92 124H360L342 178H74Z" fill="#000"/>
+  <path d="M210 178H272L246 366H184Z" fill="#000"/>
+  <path d="M80 112H348L330 166H62Z" fill="#fff"/>
+  <path d="M198 166H260L234 354H172Z" fill="#fff"/>
+</svg>
